@@ -14,142 +14,191 @@ class Buscador implements buscarPaises
 
     public function buscarTodos($countries)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->all());
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->all());
+            if(is_object($paises) || is_array($paises))
             {
-
-                $stg. pais::Mostrar($pais);
+                foreach($paises as $pais)
+                {
+    
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
 
     public function buscarPorNombre($countries,$nombres)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->byName($nombres));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byName($nombres));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
 
 
 
     public function buscarPorCodigos($countries,$codigos)
-    {   $stg = "";
-        $paises = Buscador::armoPaises($countries->byCodes($codigos));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+    {   
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byCodes($codigos));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
 
 
     public function buscarPorMoneda($countries,$moneda)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->byCurrency($moneda));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{   
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byCurrency($moneda));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
     public function buscarPorLenguaje($countries,$lenguaje)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->byLanguage($lenguaje));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byLanguage($lenguaje));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
     public function buscarPorCapital($countries,$capital)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->byCapitalCity($capital));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byCapitalCity($capital));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
     public function buscarPorCodigoDeLlamada($countries,$codigos)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->byCallingCode($codigos));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byCallingCode($codigos));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
     public function buscarPorContinente($countries,$continentes)
     {
-        $stg = "";
-        $paises = Buscador::armoPaises($countries->byRegion($continentes));
-        if(is_object($paises) || is_array($paises))
-        {
-            foreach($paises as $pais)
+        try{
+            $stg = "";
+            $paises = Buscador::armoPaises($countries->byRegion($continentes));
+            if(is_object($paises) || is_array($paises))
             {
+                foreach($paises as $pais)
+                {
 
-                $stg. pais::Mostrar($pais);
+                    $stg. pais::Mostrar($pais);
+                }
+            }else{
+                $stg= "No se encontraron resultados";
             }
-        }else{
-            $stg= "No se encontraron resultados";
+            return $stg;
+        }catch(Exception $e)
+        {
+            echo("ocurrio una exepcion");
+            return "ocurrio una exepcion";
         }
-        return $stg;
     }
     private static function armoPaises($arr)
     {   
         $paises = array();
-        $objetos =json_encode($arr); // me imprime con enconde, con decode no me funciona.
-        //$objetos = json_decode($arr);
+        $objetos =json_encode($arr); 
         $objetos = json_decode($objetos);
         if(is_object($objetos) || is_array($objetos))
         {
@@ -172,7 +221,6 @@ class Buscador implements buscarPaises
             }
         }else
         {
-            echo("no se cargo objetos");
             $paises = "No hay paises";
         }
         return $paises;

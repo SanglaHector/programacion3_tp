@@ -7,7 +7,7 @@ use NNV\RestCountries;
 $buscador = new Buscador();
 //$buscador->buscarTodos($buscador->restCountries);
 //$buscador->buscarPorNombre($buscador->restCountries,"Argentina");
-//$arr = array("vn","cn");
+//$arr = array();
 //$buscador->buscarPorCodigos($buscador->restCountries,$arr);
 //$buscador->buscarPorMoneda($buscador->restCountries,"EUR");
 //$buscador->buscarPorLenguaje($buscador->restCountries,"vi");
